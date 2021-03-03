@@ -7,6 +7,7 @@
 package mx.unam.aragon.fes.gui;
 
 import mx.unam.aragon.fes.Empleado;
+import mx.unam.aragon.fes.Direccion;
 /**
  *
  * @author ibiet
@@ -398,8 +399,17 @@ public class AltaEmpleado extends javax.swing.JFrame {
         emp.setApMaterno(jTextField3.getText() );
         emp.setEdad(Integer.parseInt(jTextField4.getText()));
         emp.setCurp(jTextField5.getText());
+        emp.setDomicilio(new Direccion());
         emp.getDomicilio().setCalle(this.jTextField6.getText());
-        
+        emp.getDomicilio().setNumero(this.jTextField7.getText());
+        emp.getDomicilio().setColonia(this.jTextField8.getText());
+        emp.getDomicilio().setDelegacion(this.jTextField9.getText());
+        emp.getDomicilio().setEstado(this.jTextField10.getText());
+        emp.setNumeroEmpleado(Integer.parseInt(this.jTextField11.getText()));
+        emp.setDepartamento(this.jTextField12.getText());
+        emp.setSueldo(Float.parseFloat(this.jTextField13.getText()));
+        emp.setHorasExtra(Integer.parseInt(this.jTextField14.getText()));
+        int confirmar=JOptionPane.showConfirmDialog(this, "¿Deseas guardar estos datos?");
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -417,13 +427,13 @@ private void limpiarFormulario(){
      this.jTextField8.setText("");
      this.jTextField9.setText("");
      this.jTextField10.setText("");
-     this.jtextField10.setColumns(10);
+     this.jTextField10.setColumns(10);
      this.jTextField11.setText("");
-     this.jtextField11.setColumns(10);
+     this.jTextField11.setColumns(10);
      this.jTextField12.setText("");
      this.jTextField13.setText("");
      this.jTextField14.setText("");
-     this.jtextField14.setColumns(10);
+     this.jTextField14.setColumns(10);
 }
     /**
      * @param args the command line arguments
