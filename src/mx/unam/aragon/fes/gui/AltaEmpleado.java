@@ -5,6 +5,7 @@
  */
 package mx.unam.aragon.fes.gui;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import mx.unam.aragon.fes.Direccion;
 import mx.unam.aragon.fes.Empleado;
@@ -16,12 +17,13 @@ import mx.unam.aragon.fes.Empleado;
  * @author unam
  */
 public class AltaEmpleado extends javax.swing.JFrame {
-
+     private ArrayList<Empleado> Lista;
     /**
      * Creates new form AltaEmpleado
      */
     public AltaEmpleado() {
         initComponents();
+        Lista=new ArrayList<Empleado>();
     }
 
     /**
@@ -393,6 +395,17 @@ public class AltaEmpleado extends javax.swing.JFrame {
         emp.setSueldo(Float.parseFloat(this.jTextField13.getText()));
         emp.setHorasExtra(Integer.parseInt(this.jTextField14.getText()));
         int confirmar = JOptionPane.showConfirmDialog(this, "¿Deseas guardar estos datos?");
+        //Subirlo a memoria
+        System.out.println("Boton:"+confirmar);
+        if(confirmar == 0){
+           Lista.add(emp);
+        }else{
+            JOptionPane.showMessageDialog(this, "No se guardo el empleado");
+            
+        }
+        System.out.println("Empleados en el ARREGLO = " + Lista.size());
+        limpiarFormulario();
+        jButton6.setEnabled(false);
     }//GEN-LAST:event_jButton6MouseClicked
 
      
