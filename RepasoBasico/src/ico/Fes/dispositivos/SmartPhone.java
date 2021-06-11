@@ -10,10 +10,11 @@ package ico.Fes.dispositivos;
  * @author ibiet
  */
 public class SmartPhone {
+    
     private String marca;
-    private String modelo;
+    private String modelo; //defecto null
     private String color;
-    private float tamanio;
+    private float tamanio; //ya no esta protegido
 
     public SmartPhone() {
     }
@@ -28,6 +29,13 @@ public class SmartPhone {
     public SmartPhone(String m) {
         this.marca = m;
     }
+
+    public SmartPhone(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+    
+    
 
     public String getMarca() {
         return marca;
@@ -60,7 +68,11 @@ public class SmartPhone {
     public void setTamanio(float tamanio) {
         this.tamanio = tamanio;
     }
+    
+    
 
+    
+    
     @Override
     public String toString() {
         return "SmartPhone{" + "marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", tamanio=" + tamanio + '}';
