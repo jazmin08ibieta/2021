@@ -56,7 +56,7 @@ public class Alumno extends Persona{
 
     @Override
     public String toString() {
-        return "Alumno{" + "numeroCuenta=" + numeroCuenta + ", carrera=" + carrera + ", semestre=" + semestre + '}';
+        return super.toString() +  "Alumno{" + "numeroCuenta=" + numeroCuenta + ", carrera=" + carrera + ", semestre=" + semestre + '}';
     }
 
     
